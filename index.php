@@ -14,6 +14,10 @@ if (
     require_once($_ROOT_DIRECTORY . '/system/app_start/autoload.php');
 }
 
+if (is_file($_ROOT_DIRECTORY . '/system/config/db.php')) {
+    require_once($_ROOT_DIRECTORY . '/system/config/db.php');
+}
+
 if (
     is_file($_ROOT_DIRECTORY . '/system/config/route.php')
     && is_file($_ROOT_DIRECTORY . '/system/app_start/Route.php')
