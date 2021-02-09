@@ -1,0 +1,29 @@
+AddDefaultCharset UTF-8
+
+Options -Indexes +FollowSymLinks
+
+DirectoryIndex index.php index.html
+
+ErrorDocument 404 /404.php
+
+<IfModule mod_php5.c>
+  php_flag display_errors On
+  php_flag log_errors On
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteBase /
+
+  RewriteCond %{REQUEST_FILENAME} !favicon\.ico
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !(.*)/$
+    RewriteRule ^(.*[^/])$ /$1/ [L,R=301]
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+    RewriteRule ^(.*)$ /index.php?$query_string [L,QSA]
+</IfModule>
