@@ -12,20 +12,20 @@
 
         Task.List
             .setOption('pageLength', 3)
-            .setOption('paging', true);
+            .setOption('paging', true)
+            .setOption('searching', true)
+            .setOption('ordering', true);
 
-        $.ajax({
-            url: '/task/list/get/',
-            data: {
-                IS_AJAX: true
-            },
-            dataType: 'json'
-        }).done(function (response) {
-            if (typeof response === 'object') {
-                response.COLUMNS && Task.List.setColumns(response.COLUMNS)
-                response.DATA && Task.List.setData(response.DATA);
-            }
+        Task.List.setColumns([
+            {title: 'Название задачи'},
+            {title: 'Описание задачи'},
+            {title: 'Автор задачи'},
+            {title: 'E-mail автора задачи'},
+            {title: 'Статус задачи'},
+        ]);
 
+        Task.List.getData(function (data) {
+            Task.List.setData(data);
             Task.List.renderData();
         });
     });

@@ -1,5 +1,6 @@
 (function (w, d, $) {
     function Module() {
+        this._uri = '/task/list/get/';
         this._element = null;
         this._data = [];
         this._columns = [];
@@ -51,6 +52,24 @@
                 }, this._options)
             );
         }
+    };
+
+    Module.prototype.getData = function (callback) {
+        $.ajax({
+            url: this._uri,
+            data: {
+                IS_AJAX: true
+            },
+            dataType: 'json'
+        }).done(function (response) {
+            var data = [];
+
+            if (typeof response === 'object' && response.data) {
+                data = response.data;
+            }
+
+            typeof callback === 'function' && callback(data);
+        });
     };
 
     function checkElement() {
