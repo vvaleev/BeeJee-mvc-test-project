@@ -8,6 +8,7 @@
     <?php Page::renderCss('fonts'); ?>
     <?php Page::renderCss('bootstrap.min'); ?>
     <?php Page::renderCss('style'); ?>
+    <?php Page::renderJs('jquery-3.3.1.min'); ?>
     <?php Page::renderJs('bootstrap.min'); ?>
     <?php Page::renderJs('script'); ?>
 
