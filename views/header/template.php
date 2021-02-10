@@ -14,4 +14,19 @@
 
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
+        <header class="row bg-primary">
+            <div class="col-xs-1">
+                <div class="header__logo-block">
+                    <a href="/">
+                        <img src="<?php echo SITE_PUBLIC_DIR_NAME; ?>/images/logo.png" alt="Logo" class="header__logo"/>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-11">
+                <div class="header-title">
+                    Управление задачами
+                </div>
+            </div>
+        </header>
+        <main class="row">

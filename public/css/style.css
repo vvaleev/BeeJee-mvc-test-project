@@ -1,0 +1,34 @@
+body {
+    font-size: 18px;
+}
+
+header {
+    height: 70px;
+}
+
+.header__logo-block {
+    margin: 10px 0 12px 10px;
+}
+
+.header__logo {
+    width: 35px;
+}
+
+.header-title {
+    text-align: center;
+    padding-top: 18px;
+    font-size: 1.1em;
+}
+
+.main {
+}
+
+footer {
+    height: 50px;
+}
+
+.footer-text-copyright {
+    text-align: center;
+    padding-top: 15px;
+    font-size: 0.9em;
+}
