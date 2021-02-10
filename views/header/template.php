@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
 
+    <?php Page::renderCss('bootstrap.min'); ?>
     <?php Page::renderCss('style'); ?>
+    <?php Page::renderJs('bootstrap.min'); ?>
     <?php Page::renderJs('script'); ?>
 
 </head>
