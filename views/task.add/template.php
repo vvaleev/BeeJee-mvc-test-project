@@ -19,7 +19,7 @@
                 <h4 class="modal-title" id="myModalLabel">Добавление задачи</h4>
             </div>
             <div class="modal-body">
-                <form data-element="form-add" action="/task/add/" method="post"
+                <form data-element="form-add" action="/" method="post"
                       enctype="application/x-www-form-urlencoded">
                     <div class="form-group">
                         <label for="inputName">Название <span class="text-danger">*</span></label>

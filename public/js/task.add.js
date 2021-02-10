@@ -14,6 +14,8 @@
     Module.prototype.init = function () {
         this.initForm('form-add');
 
+        this._uri = '/task/add/';
+
         this._$modal = $('#addTask');
         checkElement(this._$modal);
 
@@ -26,7 +28,7 @@
         formData.append('IS_AJAX', true);
 
         $.ajax({
-            url: options.url,
+            url: this._uri,
             type: options.method,
             contentType: false,
             processData: false,
