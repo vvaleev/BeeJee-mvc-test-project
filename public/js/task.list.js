@@ -5,6 +5,7 @@
         this._data = [];
         this._columns = [];
         this._options = {};
+        this._dt = null;
     }
 
     Module.prototype.init = function (selector) {
@@ -45,7 +46,7 @@
         checkElement.call(this);
 
         if (checkData(this._data) && checkColumns(this._columns)) {
-            $(this._element).DataTable(
+            this._dt = $(this._element).DataTable(
                 Object.assign({
                     data: this._data,
                     columns: this._columns,
@@ -70,6 +71,10 @@
 
             typeof callback === 'function' && callback(data);
         });
+    };
+
+    Module.prototype.getDataTableInstance = function (callback) {
+        return this._dt || $().DataTable();
     };
 
     function checkElement() {

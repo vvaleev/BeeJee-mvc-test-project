@@ -37,6 +37,12 @@
         }).done(function (response) {
             if (typeof response === 'object' && response.result) {
                 _this._$modalCloseBtn.trigger('click');
+
+                Task.List.getDataTableInstance().destroy();
+                Task.List.getData(function (data) {
+                    Task.List.setData(data);
+                    Task.List.renderData();
+                });
             }
         });
     };
