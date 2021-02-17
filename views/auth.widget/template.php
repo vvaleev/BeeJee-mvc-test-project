@@ -9,9 +9,9 @@
         <a class="btn btn-primary btn-xs auth-data__btn-logout" href="/auth/logout/">
             Выйти
         </a>
-        <?php } else { ?>
+    <?php } else { ?>
         <a class="btn btn-primary btn-xs auth-data__btn-auth" href="/auth/login/form/">
             Авторизоваться
         </a>
-        <?php } ?>
+    <?php } ?>
 </div>
