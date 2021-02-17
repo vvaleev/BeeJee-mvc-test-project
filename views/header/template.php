@@ -21,7 +21,7 @@
             <div class="col-xs-1">
                 <div class="header__logo-block">
                     <a href="/">
-                        <img src="<?php echo SITE_PUBLIC_DIR_NAME; ?>/images/logo.png" alt="Logo" class="header__logo"/>
+                        <img src="/<?php echo SITE_PUBLIC_DIR_NAME; ?>/images/logo.png" alt="Logo" class="header__logo"/>
                     </a>
                 </div>
             </div>
