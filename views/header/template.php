@@ -25,10 +25,13 @@
                     </a>
                 </div>
             </div>
-            <div class="col-xs-11">
+            <div class="col-xs-10">
                 <div class="header-title">
                     Управление задачами
                 </div>
+            </div>
+            <div class="col-xs-1">
+                <?php Route::Init("/auth/show/"); ?>
             </div>
         </header>
         <main class="row">
