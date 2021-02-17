@@ -5,7 +5,7 @@ use System\Sql\DataBase;
 DataBase::setTypeDatabase('mysql');
 DataBase::setHostname('localhost');
 DataBase::setPort(3306);
-DataBase::setDbname('');
+DataBase::setDbname('mvc_test_db');
 DataBase::setCharset('utf8');
 DataBase::setUsername('root');
 DataBase::setPassword('');
