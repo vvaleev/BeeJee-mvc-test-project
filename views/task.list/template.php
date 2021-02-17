@@ -35,9 +35,9 @@
                         if (data.hasOwnProperty(key)) {
                             data[key].pop();
                             data[key].push(
-                                '<a href="/task/remove/' + data[key][0] + '/">Удалить</a>' +
+                                '<a href="/task/remove/' + data[key][0] + '/" class="btn btn-danger">Удалить</a>' +
                                 '&nbsp;' +
-                                '<a href="/task/edit/' + data[key][0] + '/">Редактировать</a>'
+                                '<button data-toggle="modal" data-target="#editTask" data-edit-id="' + data[key][0] + '" class="btn btn-primary">Редактировать</button>'
                             );
                         }
                     }
