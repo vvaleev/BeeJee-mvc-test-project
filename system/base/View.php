@@ -11,7 +11,7 @@ final class View
     {
     }
 
-    public static function render($templateId, $data = [])
+    public function render($templateId, $data = [])
     {
         self::renderView($templateId, $data);
     }
