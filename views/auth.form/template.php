@@ -1,6 +1,5 @@
 <?php use \System\Document\Page; ?>
 <?php Page::renderCss('auth.form'); ?>
-<?php Page::renderJs('task.form'); ?>
 <?php Page::renderJs('auth.form'); ?>
 
 <div class="auth-form">
