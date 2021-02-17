@@ -154,7 +154,6 @@ class TaskModel extends System\Model
             SET
               name = :name,
               description = :description,
-              author = :author,
               email = :email,
               status = :status
             WHERE
@@ -166,7 +165,6 @@ class TaskModel extends System\Model
            'id' => $id,
            'name' => $data['name'],
            'description' => $data['description'],
-           'author' => $data['author'],
            'email' => $data['email'],
            'status' => $data['status'],
         ]);

@@ -32,11 +32,6 @@
                                   rows="10" class="form-control" required="required" placeholder="Описание"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="inputAuthor">Автор <span class="text-danger">*</span></label>
-                        <input data-element="form-author" type="text" name="author" class="form-control"
-                               id="inputAuthor" required="required" placeholder="Автор"/>
-                    </div>
-                    <div class="form-group">
                         <label for="inputEmail">E-mail <span class="text-danger">*</span></label>
                         <input data-element="form-email" type="email" name="email" class="form-control" id="inputEmail"
                                required="required" placeholder="E-mail"/>

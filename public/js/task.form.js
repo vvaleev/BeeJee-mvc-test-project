@@ -3,7 +3,6 @@
         this._$formElement = null;
         this._$formNameElement = null;
         this._$formDescriptionElement = null;
-        this._$formAuthorElement = null;
         this._$formEmailElement = null;
         this._$formStatusElement = null;
         this._$formSubmitElement = null;
@@ -20,9 +19,6 @@
 
         this._$formDescriptionElement = this._$formElement.find('[data-element="form-description"]');
         checkElement(this._$formDescriptionElement);
-
-        this._$formAuthorElement = this._$formElement.find('[data-element="form-author"]');
-        checkElement(this._$formAuthorElement);
 
         this._$formEmailElement = this._$formElement.find('[data-element="form-email"]');
         checkElement(this._$formEmailElement);
@@ -82,14 +78,6 @@
         return get.call(this, this._$formDescriptionElement);
     };
 
-    Module.prototype.author = function (value) {
-        if (value) {
-            return set.apply(this, [this._$formAuthorElement, value]);
-        }
-
-        return get.call(this, this._$formAuthorElement);
-    };
-
     Module.prototype.email = function (value) {
         if (value) {
             return set.apply(this, [this._$formEmailElement, value]);
@@ -129,7 +117,6 @@
     function resetErrorStatuses() {
         this._$formNameElement.css({border: ''});
         this._$formDescriptionElement.css({border: ''});
-        this._$formAuthorElement.css({border: ''});
         this._$formEmailElement.css({border: ''});
         this._$formStatusElement.css({border: ''});
     }
@@ -143,9 +130,6 @@
                 break;
             case 'description':
                 this._$formDescriptionElement.css({border: borderPropertyValue});
-                break;
-            case 'author':
-                this._$formAuthorElement.css({border: borderPropertyValue});
                 break;
             case 'email':
                 this._$formEmailElement.css({border: borderPropertyValue});
@@ -162,8 +146,6 @@
                 return !(this._$formNameElement.prop('required') && !this.name());
             case 'description':
                 return !(this._$formDescriptionElement.prop('required') && !this.description());
-            case 'author':
-                return !(this._$formAuthorElement.prop('required') && !this.author());
             case 'email':
                 return !(this._$formEmailElement.prop('required') && !this.email());
             case 'status':

@@ -61,9 +61,7 @@ class TaskController extends System\Controller
             && !empty($_POST['status'])
             && in_array($_POST['status'], ['1', '2', '3'], true)
         ) {
-            $_POST['id'] = (int)$id;
-
-            if ($this->model->saveData(escapeData($_POST))) {
+            if ($this->model->editById($id, escapeData($_POST))) {
                 return ['result' => true];
             }
         }
