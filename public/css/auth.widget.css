@@ -5,3 +5,7 @@
 .auth-data__btn-logout {
     margin-top: 5px;
 }
+
+.auth-data__btn-auth {
+    margin-top: 10px;
+}
