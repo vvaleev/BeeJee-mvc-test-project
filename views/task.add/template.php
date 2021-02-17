@@ -47,7 +47,6 @@
                                 required="required">
                             <option value="1" selected="selected">Не выполнено</option>
                             <option value="2">В работе</option>
-                            <option value="3">Выполнено</option>
                         </select>
                     </div>
                 </form>

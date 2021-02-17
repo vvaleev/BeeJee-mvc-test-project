@@ -41,7 +41,7 @@ class TaskController extends System\Controller
             && !empty($_POST['description'])
             && !empty($_POST['email'])
             && !empty($_POST['status'])
-            && $_POST['status'] === '1'
+            && in_array($_POST['status'], ['1', '2'], true)
         ) {
             if ($this->model->saveData(escapeData($_POST))) {
                 return ['result' => true];
