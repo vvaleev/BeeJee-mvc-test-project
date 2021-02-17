@@ -22,6 +22,10 @@ if (is_file($_ROOT_DIRECTORY . '/system/config/file.php')) {
     require_once($_ROOT_DIRECTORY . '/system/config/file.php');
 }
 
+if (is_file($_ROOT_DIRECTORY . '/system/base/functions.php')) {
+    require_once($_ROOT_DIRECTORY . '/system/base/functions.php');
+}
+
 if (
     is_file($_ROOT_DIRECTORY . '/system/config/route.php')
     && is_file($_ROOT_DIRECTORY . '/system/app_start/Route.php')
