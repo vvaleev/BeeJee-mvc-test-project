@@ -14,8 +14,8 @@
             .setOption('pageLength', 3)
             .setOption('paging', true)
             .setOption('searching', true)
-            .setOption('ordering', true)
-            .setOption('order', [[0, 'desc']]);
+            .setOption('ordering', true);
+            // .setOption('order', [[0, 'desc']]);
 
         Task.List.setColumns([
             {title: 'Название задачи'},
